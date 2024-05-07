@@ -5,5 +5,14 @@
 import { Inter, Chivo, Fira_Mono } from 'next/font/google'
 
 export const inter = Inter({ subsets: ["latin"] });
-export const chivo = Chivo({ subsets: ["latin"], display: "swap" });
-export const fira_mono = Fira_Mono({ weight: '400', subsets: ["latin"], display: "swap"});
+export const chivo = Chivo({
+    subsets: ["latin"],
+    display: "swap",
+    variable: '--font-chivo'
+});
+export const fira_mono = Fira_Mono({
+    weight: '400',
+    subsets: ["latin"],
+    display: "swap",
+    variable: '--font-fira-mono'
+});

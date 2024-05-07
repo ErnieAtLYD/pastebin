@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { fira_mono } from './fonts';
+import { chivo, fira_mono } from './fonts';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fira_mono.className}>
+      <body className={chivo.variable + ' ' + fira_mono.variable}>
         {children}
       </body>
     </html>
