@@ -11,14 +11,19 @@ export function Pastebin() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
       <div className="w-full max-w-md space-y-4">
+        <div aria-live="assertive">
+            {/* Error messages go here */}
+        </div>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-          <h1 className="text-2xl font-bold mb-4">Pastebin Clone</h1>
-          <form className="space-y-4">
+          <form className="space-y-4" method="POST" action="/api/paste" aria-labelledby="formTitle">
+            <h1 id="formTitle" className="text-2xl font-bold mb-4">Pastebin Clone</h1>
             <Textarea
+              name="pasteContent"
+              aria-label="Paste content"
               className="w-full h-40 resize-none rounded-md border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 font-mono"
               placeholder="Enter your text here..."
             />
-            <Button className="w-full font-bold" type="submit">
+            <Button aria-label="Create paste" className="w-full font-bold" type="submit">
               Create Paste
             </Button>
           </form>
