@@ -5,11 +5,14 @@
 */
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Metadata } from "./metadata"
 
-export function Pastebin({ handleSubmit, value, setValue }: { handleSubmit: (e: React.FormEvent) => void, value: string, setValue: (value: string) => void }) {
+export function Pastebin({ handleSubmit, value, setValue }: {
+  handleSubmit: (e: React.FormEvent) => void,
+  value: string,
+  setValue: (value: string) => void
+}) {
   return (
-    <div className="w-full max-w-md space-y-4">
+    <>
       <div aria-live="assertive">
         {/* Error messages go here */}
       </div>
@@ -29,7 +32,6 @@ export function Pastebin({ handleSubmit, value, setValue }: { handleSubmit: (e: 
           </Button>
         </form>
       </div>
-      <Metadata />
-    </div>
+    </>
   )
 }

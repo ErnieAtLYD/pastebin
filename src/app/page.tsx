@@ -21,5 +21,9 @@ export default function Home() {
     router.push(`/paste/${id}`);
   };
 
-  return <Pastebin handleSubmit={handleSubmit} value={content} setValue={setContent} />;
+  return (
+    <div className="w-full max-w-md space-y-4">
+      <Pastebin handleSubmit={handleSubmit} value={content} setValue={setContent} />
+    </div>);
 }
+

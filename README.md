@@ -19,3 +19,26 @@ Start the development server at localhost:3000 by running the following command:
 ```bash
 pnpm dev
 ```
+
+## Directory structure
+
+```
+src/
+├─ app/
+│  ├─ api/
+│  │  ├─ paste/
+│  │  │  └─ route.ts -> /api/paste, server component
+│  ├─ paste/
+│  │  ├─ [id]/
+│  │  │  └─ page.tsx, /paste/[id], client component
+│  ├─ layout.tsx, layout component
+│  ├─ page.tsx, home page
+├─ components/
+│  ├─ metadata.tsx
+│  ├─ pastebin.tsx
+│  ├─ ui/
+│  │  ├─ button.tsx
+│  │  └─ textarea.tsx
+├─ lib/
+│  └─ db.ts
+```
