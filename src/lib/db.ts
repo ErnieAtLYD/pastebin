@@ -3,6 +3,7 @@ const pastes = new Map();
 
 export const savePaste = async (content: string) => {
     const id = `${Math.random().toString(36).substring(2, 11)}`;
+    // console.log(id, content);
     pastes.set(id, { content });
     return id;
 };
