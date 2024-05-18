@@ -15,7 +15,7 @@ Pastebin projects are commonly used by developers, programmers, and other indivi
 
 ## Installation
 
-Start the development server by running the following command:
+Start the development server at localhost:3000 by running the following command:
 ```bash
 pnpm dev
 ```

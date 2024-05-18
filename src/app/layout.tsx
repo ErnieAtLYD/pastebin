@@ -15,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={chivo.variable + ' ' + fira_mono.variable}>
-        {children}
+        <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+          {children}
+        </div>
       </body>
     </html>
   );
