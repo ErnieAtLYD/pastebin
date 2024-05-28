@@ -3,8 +3,15 @@
 * @see https://v0.dev/t/BeFhZb3Yvcm
 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 */
+import { TrashIcon } from '@/components/metadata';
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+
+interface PastebinProps {
+  handleSubmit: (e: React.FormEvent) => void;
+  value: string;
+  setValue: (value: string) => void;
+}
 
 export function Pastebin({ handleSubmit, value, setValue }: {
   handleSubmit: (e: React.FormEvent) => void,
@@ -27,9 +34,12 @@ export function Pastebin({ handleSubmit, value, setValue }: {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <Button aria-label="Create paste" className="w-full font-bold" type="submit">
+        <div className="flex items-center justify-between">
+          <Button className="font-bold" type="submit">
             Create Paste
           </Button>
+
+        </div>
         </form>
       </div>
     </>
