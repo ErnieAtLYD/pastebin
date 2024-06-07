@@ -17,3 +17,7 @@ export const savePaste = async (content: string) => {
 export const fetchPaste = async (id: string) => {
     return await kv.get(id);
 };
+
+export const deletePaste = async (id: string) => {
+    await kv.del(id);
+};

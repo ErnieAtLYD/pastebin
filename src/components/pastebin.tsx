@@ -38,7 +38,6 @@ export function Pastebin({ handleSubmit, value, setValue }: {
           <Button className="font-bold" type="submit">
             Create Paste
           </Button>
-
         </div>
         </form>
       </div>
