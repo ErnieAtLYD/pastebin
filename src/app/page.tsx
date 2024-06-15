@@ -3,8 +3,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Pastebin } from "@/components/pastebin";
-
+import { Pastebin } from "@/components/Pastebin";
 
 export default function Home() {
   const [content, setContent] = useState('');

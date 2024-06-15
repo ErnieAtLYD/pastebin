@@ -1,12 +1,13 @@
 import { JSX, SVGProps } from "react";
-import { Button } from "./ui/button";
+import { Button } from "./ui/Button";
 
 interface MetadataProps {
   id: string;
   createdAt: Date;
+  appBaseUrl: string;
 }
 
-export const Metadata = ({id, createdAt}: MetadataProps) => {
+export const Metadata = ({id, appBaseUrl, createdAt}: MetadataProps) => {
     return (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 space-y-4">
           <div>
@@ -14,7 +15,7 @@ export const Metadata = ({id, createdAt}: MetadataProps) => {
             <div className="mt-2 flex items-center space-x-2">
               <span className="text-gray-500 dark:text-gray-400">URL:</span>
               <div className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap font-mono">
-                https://pastebin.com/{id}
+                {appBaseUrl}/{id}
               </div>
               <Button className="font-bold" size="sm" variant="ghost">
                 <CopyIcon className="h-4 w-4" />
@@ -27,7 +28,7 @@ export const Metadata = ({id, createdAt}: MetadataProps) => {
             <div className="mt-2 grid grid-cols-2 gap-2">
               <div className="flex items-center space-x-2">
                 <span className="text-gray-500 dark:text-gray-400">Views:</span>
-                <span className="font-mono">123</span>
+                <span className="font-mono">0</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-gray-500 dark:text-gray-400">Created:</span>

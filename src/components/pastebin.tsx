@@ -3,15 +3,15 @@
 * @see https://v0.dev/t/BeFhZb3Yvcm
 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 */
-import { TrashIcon } from '@/components/metadata';
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+// import { TrashIcon } from '@/components/metadata';
+import { Textarea } from "@/components/ui/Textarea"
+import { Button } from "@/components/ui/Button"
 
-interface PastebinProps {
-  handleSubmit: (e: React.FormEvent) => void;
-  value: string;
-  setValue: (value: string) => void;
-}
+// interface PastebinProps {
+//   handleSubmit: (e: React.FormEvent) => void;
+//   value: string;
+//   setValue: (value: string) => void;
+// }
 
 export function Pastebin({ handleSubmit, value, setValue }: {
   handleSubmit: (e: React.FormEvent) => void,
@@ -24,21 +24,28 @@ export function Pastebin({ handleSubmit, value, setValue }: {
         {/* Error messages go here */}
       </div>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-        <form className="space-y-4" onSubmit={handleSubmit} aria-labelledby="formTitle">
-          <h1 id="formTitle" className="text-2xl font-bold mb-4">Pastebin Clone</h1>
+        <form
+          aria-labelledby="formTitle"
+          className="space-y-4"
+          onSubmit={handleSubmit}>
+          <h1
+            id="formTitle"
+            className="text-2xl font-bold mb-4">
+            Pastebin Clone
+          </h1>
           <Textarea
-            name="pasteContent"
             aria-label="Paste content"
             className="w-full h-40 resize-none rounded-md border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 font-mono"
+            name="pasteContent"
+            onChange={(e) => setValue(e.target.value)}
             placeholder="Enter your text here..."
             value={value}
-            onChange={(e) => setValue(e.target.value)}
           />
-        <div className="flex items-center justify-between">
-          <Button className="font-bold" type="submit">
-            Create Paste
-          </Button>
-        </div>
+          <div className="flex items-center justify-between">
+            <Button className="font-bold" type="submit">
+              Create Paste
+            </Button>
+          </div>
         </form>
       </div>
     </>

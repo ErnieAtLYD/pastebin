@@ -19,5 +19,9 @@ export const fetchPaste = async (id: string) => {
 };
 
 export const deletePaste = async (id: string) => {
-    await kv.del(id);
+    console.log(`process.env.KV_REST_API_URL = ${process.env.KV_REST_API_URL}`);
+
+
+    
+    return await kv.del(id);
 };
