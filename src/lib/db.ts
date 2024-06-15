@@ -10,7 +10,8 @@ export interface Paste {
 
 export const savePaste = async (content: string) => {
     const id = nanoid();
-    await kv.set(id, { content });
+    const createdAt = new Date();
+    await kv.set(id, { content, createdAt });
     return id;
 };
 
@@ -22,6 +23,6 @@ export const deletePaste = async (id: string) => {
     console.log(`process.env.KV_REST_API_URL = ${process.env.KV_REST_API_URL}`);
 
 
-    
+
     return await kv.del(id);
 };
