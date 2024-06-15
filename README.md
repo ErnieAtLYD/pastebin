@@ -15,6 +15,13 @@ Pastebin projects are commonly used by developers, programmers, and other indivi
 
 ## Installation
 
+You will need to have the following environment variables set:
+
+- `NEXT_PUBLIC_KV_URL` - The URL of the KV database
+- `NEXT_PUBLIC_KV_TOKEN` - The token for the KV database
+
+See the [Environment Variables page on Vercel](https://vercel.com/docs/projects/environment-variables).
+
 Start the development server at localhost:3000 by running the following command:
 ```bash
 pnpm dev
