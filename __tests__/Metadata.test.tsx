@@ -1,7 +1,5 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { Metadata } from './Metadata';
+import { Metadata } from '../src/components/Metadata';
 
 describe('Metadata', () => {
   it('renders the metadata', () => {
