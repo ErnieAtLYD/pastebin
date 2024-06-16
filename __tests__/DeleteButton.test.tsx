@@ -1,16 +1,9 @@
+import { useRouter } from 'next/navigation'
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { DeleteButton } from './DeleteButton';
-import { useRouter } from 'next/router';
+import { DeleteButton } from '../src/components/DeleteButton';
+import mockRouter from "next-router-mock"
 
-jest.mock('next/router', () => ({
-    useRouter: () => ({
-        pathname: '/',
-        query: '',
-        asPath: '',
-        push: jest.fn(),
-    }),
-}));
+jest.mock('next/navigation', () => ({ useRouter: jest.fn() }));
 
 jest.mock('nanoid');
 
