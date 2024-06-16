@@ -3,10 +3,12 @@
 import { Button } from "@/components/ui/Button";
 import { TrashIcon } from "@/components/Metadata";
 import { useState } from "react";
-import { useRouter, NextRouter } from "next/router";
 import { deletePaste } from "@/lib/db";
+import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-export async function handleDelete(pasteId: string, router: NextRouter, setIsDeleting: (isDeleting: boolean) => void) {
+export async function handleDelete(pasteId: string, router: AppRouterInstance, setIsDeleting: (isDeleting: boolean) => void) {
+  
   try {
     setIsDeleting(true);
     const resp = await deletePaste(pasteId);
