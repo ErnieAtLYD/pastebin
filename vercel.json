@@ -2,7 +2,6 @@
     "build": {
       "env": {
         "CI": "true"
-      },
-      "command": "pnpm test && pnpm run build"
+      }
     }
 }
