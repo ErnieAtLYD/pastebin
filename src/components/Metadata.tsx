@@ -8,6 +8,9 @@ interface MetadataProps {
 }
 
 export const Metadata = ({id, appBaseUrl, createdAt}: MetadataProps) => {
+
+  const generatedURL = `${appBaseUrl}/paste/${id}`;
+
     return (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 space-y-4">
           <div>
@@ -15,7 +18,7 @@ export const Metadata = ({id, appBaseUrl, createdAt}: MetadataProps) => {
             <div className="mt-2 flex items-center space-x-2">
               <span className="text-gray-500 dark:text-gray-400">URL:</span>
               <div className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap font-mono">
-                {appBaseUrl}/{id}
+                {generatedURL}
               </div>
               <Button className="font-bold" size="sm" variant="ghost">
                 <CopyIcon className="h-4 w-4" />
