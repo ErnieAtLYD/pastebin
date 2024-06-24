@@ -1,24 +1,29 @@
 # Pastebin project
 
-A pastebin project is a type of software application or web service that allows users to store and share text-based information, such as code snippets, notes, or any other type of text content. The term "pastebin" originated from the idea of pasting text into a virtual clipboard, which can then be easily shared with others.
+This project is a simple yet powerful Pastebin service. It allows users to store and share text-based information, such as code snippets, notes, or any other type of text content. The service assigns unique URLs to each text snippet, which can be shared with others, allowing them to access and view the content.
 
-In a pastebin project, users can typically create, edit, and save text snippets, which are assigned unique URLs. These URLs can be shared with others, allowing them to access and view the content. Pastebin projects often provide additional features like syntax highlighting, expiration dates for snippets, and the ability to password-protect or make snippets private.
+## Tech Stack
 
-Pastebin projects are commonly used by developers, programmers, and other individuals who need a quick and convenient way to share code snippets or textual information with others. They are particularly useful for sharing code examples, troubleshooting issues, collaborating on projects, or seeking help from the community.
+This project was built using the following technologies:
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/) and [Tailwind CSS](https://tailwindcss.com/), via https://v0.dev/
+- [Vercel](https://vercel.com/)
+- [KV Database](https://kvdb.io/)
+- [pnpm](https://pnpm.io/)
+- GitHub Actions
 
-## Table of Contents
+This project also represents my first foray into Next.js and Vercel architecture, my first time actually doing something related to CI/CD instead of talking about it like a big bowl of abstractions, and my first experience giving the side eye at the React Server Components because, seriously, is it 2004 again? Do any of you remember ASP pages, or were you all, like, three years old? 
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
-## Installation
+### Local Installation
 
-You will need to have the following environment variables set:
-
-- `NEXT_PUBLIC_KV_URL` - The URL of the KV database
-- `NEXT_PUBLIC_KV_TOKEN` - The token for the KV database
+- Clone the repo
+- Install NPM packages
+- Start the development server at localhost:3000
+- You will need to have the following environment variables set:
+    - `NEXT_PUBLIC_KV_URL` - The URL of the KV database
+    - `NEXT_PUBLIC_KV_TOKEN` - The token for the KV database
 
 See the [Environment Variables page on Vercel](https://vercel.com/docs/projects/environment-variables).
 
@@ -30,6 +35,9 @@ pnpm dev
 ## Directory structure
 
 ```
+├ __mocks__
+├ __tests__
+...
 src/
 ├─ app/
 │  ├─ api/
@@ -49,3 +57,15 @@ src/
 ├─ lib/
 │  └─ db.ts
 ```
+
+https://v0.dev/t/BeFhZb3Yvcm
+
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Your Name - your_email@gmail.com
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
