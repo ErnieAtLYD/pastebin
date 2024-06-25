@@ -37,13 +37,13 @@ export default async function PastePage({ params }: { params: { id: string } }) 
           value={paste.content}
         />
         <div className="flex items-center justify-between">
-          <Button className="font-bold" type="submit">
-            Create Paste
-          </Button>
           <DeleteButton pasteId={params.id} />
         </div>
       </div>
     </div>
-    <Metadata id={params.id} createdAt={paste.createdAt} appBaseUrl={process.env.BASE_URL || ''} />
+    <Metadata 
+      id={params.id} 
+      createdAt={paste.createdAt} 
+      appBaseUrl={process.env.BASE_URL || ''} />
   </>;
 }

@@ -2,6 +2,14 @@
 import { kv } from "@vercel/kv";
 import { nanoid } from "nanoid";
 
+const KV_REST_API_URL = process.env.KV_REST_API_URL;
+const KV_REST_API_TOKEN = process.env.KV_REST_API_TOKEN;
+
+
+if (!KV_REST_API_URL || !KV_REST_API_TOKEN) {
+    throw new Error('Missing required environment variables KV_REST_API_URL and KV_REST_API_TOKEN');
+}
+
 export interface Paste {
     id: string;
     content: string;
