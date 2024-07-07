@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Metadata } from '../src/components/Metadata';
+import { Metadata } from '../../components/Metadata';
 
 describe('Metadata', () => {
   it('renders the metadata', () => {
