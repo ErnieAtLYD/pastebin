@@ -3,7 +3,7 @@ import { Button } from "./ui/Button";
 
 interface MetadataProps {
   id: string;
-  createdAt: Date;
+  createdAt: number;
   appBaseUrl: string;
 }
 
